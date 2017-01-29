@@ -1,0 +1,17 @@
+{
+	"settings": {
+		"token": "BOT TOKEN HERE"
+	},
+	"plugins": [
+		{
+			"name": "baseplugin",
+			"file": "baseplugin.js",
+			"arguments": "arg0,arg1"
+		},
+		{
+			"name": "baseplugin2",
+			"file": "baseplugin2.js",
+			"arguments": "arg0,arg1"
+		}
+	]
+}
