@@ -1,17 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var cfgfile = require('./config.json'); // require configuration file
-var config = JSON.parse(cfgfile); //parse configuration file
-var pluginList[];
-for (var i=0; i<config['plugins'].length; i++){//import plugin list
-	pluginlist.push([config['plugins'][i].name,config['plugins'][i].file,config['plugins'][i].arguments]);
-}
-//for extra parsing info: http://stackoverflow.com/questions/8449659/parsing-json-array-nodejs
+client.setMaxListeners(41)
+const config = require('./config.json'); // require configuration file
 
-// Connect
-client.on('ready', () => {
-	//start - set on ready functions for all plugins
-	//end - set on ready functions for all plugins
-});
+for (var p=0; p<config['plugins'].length; p++){//require all plugin scripts with client and configuration arguments
+	require('./plugins/' + config['plugins'][p].file)(client,config['plugins'][p].arguments.split(','))
+}
 
 client.login(config.settings.token);

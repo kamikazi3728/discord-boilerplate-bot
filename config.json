@@ -1,17 +1,17 @@
 {
 	"settings": {
-		"token": "BOT TOKEN HERE"
+		"token": "YOUR BOT TOKEN HERE"
 	},
 	"plugins": [
 		{
 			"name": "baseplugin",
 			"file": "baseplugin.js",
-			"arguments": "arg0,arg1"
+			"arguments": "!simonsays"  <!-------IF YOU DON'T WANT SIMON SAYS TO WORK, either set "arguments" to "STOP", or delete this plugin from this file----->
 		},
 		{
 			"name": "baseplugin2",
 			"file": "baseplugin2.js",
-			"arguments": "arg0,arg1"
+			"arguments": "Logged in as ,!"
 		}
 	]
 }
